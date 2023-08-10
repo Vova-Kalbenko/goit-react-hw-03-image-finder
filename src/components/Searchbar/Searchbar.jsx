@@ -6,7 +6,7 @@ class Searchbar extends Component {
   state = {
     name: '',
  };
-// это параметр поитска который береться с инпута 
+// это параметр поитска который береться с инпута ПРИ ВВОДЕ
   handleChange = event => {
     const { value } = event.currentTarget;
     this.setState({ name: value });
@@ -61,6 +61,7 @@ class Searchbar extends Component {
             type="text"
             onChange={this.handleChange}
             autoComplete="off"
+            value={this.state.name}
             autoFocus
             placeholder="Search images and photos"
           />
